@@ -33,7 +33,7 @@ class FindParentDirFromCurrentDir:
         #subir a arvore de diretorios a partir do diretorio atual até que a condição do diretorio
         #ser root seja alcançada
 
-        is_parent = lambda diretorio_atual: diretorio_atual==parent
+        is_parent = lambda diretorio_atual: os.path.basename(diretorio_atual)==parent
 
         return self.subir_arvore_diretorios(diretorio_atual, is_parent)
     

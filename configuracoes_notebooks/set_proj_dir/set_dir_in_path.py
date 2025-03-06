@@ -9,3 +9,5 @@ def set_dir_in_path(diretorio:str)->str:
         raise ValueError(f'Diretorio {diretorio} inexistente.')
 
     sys.path.append(diretorio)
+
+    assert diretorio in sys.path
